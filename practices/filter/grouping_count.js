@@ -1,8 +1,15 @@
 'use strict';
 
 function grouping_count(collection) {
-
-  //在这里写入代码
+  let obj = {};
+  collection.filter(item=>{
+    if(obj.hasOwnProperty(item)){
+      obj[item]++;
+    }else{
+      obj[item] = 1;
+    }
+  });
+  return obj;
 }
 
 module.exports = grouping_count;
